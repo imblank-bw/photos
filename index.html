@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Form -->
+    <div class="login-container" id="loginContainer">
+        <form id="loginForm" method="post">
+            <h2>Login to Access Gallery</h2>
+            <input type="text" name="userId" id="userId" placeholder="Enter User ID" required>
+            <input type="password" name="password" id="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+            <p id="loginError" class="error-message"></p>
+        </form>
+    </div>
+
+    <!-- Main Content (Gallery) -->
+    <div class="container" id="mainContent" style="display: none;">
+        <header>
+            <h1>Our Photo Gallery</h1>
+            <p>Upload photos and browse through your memories.</p>
+        </header>
+
+        <!-- Search bar -->
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search by date (YYYY-MM-DD)">
+            <button id="searchButton">Search</button>
+        </div>
+        
+        <!-- Photo upload form -->
+        <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="photos" id="photoInput" accept="image/*" multiple required>
+            <button type="submit">Upload Photos</button>
+        </form>
+
+        <!-- Photo Gallery Grouped by Date -->
+        <div id="photoGallery" class="photo-gallery"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

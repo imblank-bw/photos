@@ -1,0 +1,221 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Login Form Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+input[type="text"], input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 14px;
+}
+
+/* Main Content (Gallery) Styles */
+.container {
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#searchBar {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#searchButton {
+    margin-left: 10px;
+}
+
+/* Photo Upload Form Styles */
+#uploadForm {
+    margin-bottom: 30px;
+}
+
+#photoInput {
+    margin-bottom: 10px;
+}
+
+/* Photo Gallery Styles */
+.photo-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between date sections */
+}
+
+.photo-date-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-date-header {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.photo-items-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to next row */
+    gap: 10px; /* Space between photos */
+}
+
+.photo-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 1 1 200px; /* Adjust width and allow flexible wrapping */
+    max-width: 200px; /* Ensure photos do not exceed this width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-height: 90%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.modal-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px;
+    width: 90%;
+}
+
+.modal-options button {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.modal-prev,
+.modal-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 70px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.modal-prev {
+    left: 0;
+}
+
+.modal-next {
+    right: 0;
+}
+
+.modal-prev:hover,
+.modal-next:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 100px; /* Adjusted for better visibility */
+    cursor: pointer;
+    font-size: 30px; /* Increased font size for better visibility */
+    z-index: 101; /* Ensure it's above other content */
+}
